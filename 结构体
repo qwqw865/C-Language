@@ -1,0 +1,23 @@
+//结构体--struct
+//我们自己创造出来的一种类型
+#include <stdio.h>
+
+struct Book 
+{
+	char name[20];//C语言程序设计
+	short price;//55
+};//注意：分号不可缺少
+
+
+int main() 
+{
+	//利用结构体类型创建一个该类型的变量出来（b1）
+	struct Book b1 = {"C语言程序设计", 55}; //大括号赋值
+	struct Book* pb = &b1;//指针变量*pb取了b1的地址
+	printf("%s\n",pb->name);//指针指向b1.name
+  printf("书名:%s\n", b1.name);
+	printf("价格:%d\n", b1.price);
+	b1.price = 15;
+	printf("修改后的价格:%d元\n", b1.price);
+	return 0;
+}
